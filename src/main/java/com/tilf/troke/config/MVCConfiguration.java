@@ -15,7 +15,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-
+/*
 @Configuration
 @ComponentScan(basePackages="net.codejava.spring")
 @EnableWebMvc
@@ -42,9 +42,11 @@ public class MVCConfiguration extends WebMvcConfigurerAdapter{
 		
 		return dataSource;
 	}
+	
 	@Bean
 	public UserDAO getContactDAO() {
 		return new UserDAOimpl(getDataSource());
 	}
+	*/
 
 }
