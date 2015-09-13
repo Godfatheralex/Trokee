@@ -11,11 +11,11 @@ public class User {
 	private String telephone;
 	private String password;
 	private String zipcode;
-	private char state;
-	private char online;
+	private String state;
+	private String online;
 	private Date creationdate;
 	private int permissionlevel;
-	private char isvip;
+	private String isvip;
 
 
 
@@ -25,7 +25,7 @@ public class User {
 	}
 	
 	public User(String name, String firstname,String id,String email, String photo, String telephone,
-				String zipcode, char state, char online,Date creationdate, int permissionlevel,char isvip, String password )
+				String zipcode, String state, String online,Date creationdate, int permissionlevel,String isvip, String password )
 	{
 		this.name = name;
 		this.firstname = firstname;
@@ -38,7 +38,7 @@ public class User {
 		this.setOnline(online);
 		this.creationdate = creationdate;
 		this.permissionlevel = permissionlevel;
-		this.isvip = isvip;
+		this.setIsvip(isvip);
 		this.password = password;
 	}
 
@@ -123,27 +123,29 @@ public class User {
 		this.password = password;
 	}
 
-	public char getState() {
+	public String getState() {
 		return state;
 	}
 
-	public void setState(char state) {
+	public void setState(String state) {
 		this.state = state;
 	}
 
-	public char getOnline() {
+	public String getOnline() {
 		return online;
 	}
 
-	public void setOnline(char online) {
+	public void setOnline(String online) {
 		this.online = online;
 	}
 
-	public char getIsvip() {
+	public String getIsvip() {
 		return isvip;
 	}
 
-	public void setIsvip(char isvip) {
+	public void setIsvip(String isvip) {
 		this.isvip = isvip;
 	}
+
+	
 }

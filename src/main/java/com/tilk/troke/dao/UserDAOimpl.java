@@ -6,13 +6,12 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
-import com.tilf.troke.model.User;
-
-
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
+
+import com.tilf.troke.model.User;
 
 
 public class UserDAOimpl implements UserDAO{
@@ -75,11 +74,11 @@ public class UserDAOimpl implements UserDAO{
 				user.setTelephone(rs.getString("telephone"));
 				user.setPassword(rs.getString("password"));
 				user.setZipcode(rs.getString("zipcode"));
-				user.setState((char) rs.getShort("state"));
-				user.setOnline((char)rs.getShort("online"));
+				user.setState(rs.getString("state"));
+				user.setOnline(rs.getString("online"));
 				user.setCreationdate(rs.getDate("creationdate"));
 				user.setPermissionlevel(rs.getInt("permissionlevel"));
-				user.setIsvip((char)rs.getShort("isvip"));
+				user.setIsvip(rs.getString("isvip"));
 				
 				return user;
 			}
@@ -107,11 +106,11 @@ public class UserDAOimpl implements UserDAO{
 				aUser.setPhoto(rs.getString("AVATAR"));
 				aUser.setTelephone(rs.getString("TELEPHONE"));
 				aUser.setZipcode(rs.getString("ZIPCODE"));
-				aUser.setState((char)rs.getShort("ISBANNED"));
-				aUser.setOnline((char)rs.getShort("ISONLINE"));
+				aUser.setState(rs.getString("ISBANNED"));
+				aUser.setOnline(rs.getString("ISONLINE"));
 				aUser.setCreationdate(rs.getDate("CREATIONDATE"));
 				aUser.setPermissionlevel(rs.getInt("PERMISSIONLEVEL"));
-				aUser.setIsvip((char)rs.getShort("ISVIP"));
+				aUser.setIsvip(rs.getString("ISVIP"));
 
 							
 				return aUser;

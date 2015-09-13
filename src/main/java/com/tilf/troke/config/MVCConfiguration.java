@@ -15,7 +15,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-/*
+
 @Configuration
 @ComponentScan(basePackages="net.codejava.spring")
 @EnableWebMvc
@@ -28,6 +28,7 @@ public class MVCConfiguration extends WebMvcConfigurerAdapter{
 		resolver.setSuffix(".jsp");
 		return resolver;
 	}
+	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
@@ -36,9 +37,9 @@ public class MVCConfiguration extends WebMvcConfigurerAdapter{
 	public DataSource getDataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl(":mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT:3306");
-		dataSource.setUsername("adminyqXzTyW");
-		dataSource.setPassword("XDsNQCI3MKNZ");
+		dataSource.setUrl("jdbc:mysql://127.0.0.1:3306/projettroke");
+		dataSource.setUsername("adminDYMECcV");
+		dataSource.setPassword("Lym-Umw559_N");
 		
 		return dataSource;
 	}
@@ -47,6 +48,6 @@ public class MVCConfiguration extends WebMvcConfigurerAdapter{
 	public UserDAO getContactDAO() {
 		return new UserDAOimpl(getDataSource());
 	}
-	*/
+	
 
 }
