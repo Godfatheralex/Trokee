@@ -119,7 +119,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>4.0.3.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>cglib</groupId>
@@ -188,4 +187,13 @@
 	</build>
 </profile>
     </profiles>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>4.0.3.RELEASE</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>

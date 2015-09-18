@@ -31,11 +31,11 @@
 	        	<th style="text-align:center;">Photo</th>
 	        	<th style="text-align:center;">Action</th>
 	        	
-				<c:forEach var="contact" items="${listContact}" varStatus="status">
+				<c:forEach var="user" items="${listContact}" varStatus="status">
 	        	<tr>
 	        		<td class="ListeID">${status.index + 1}</td>
-					<td>${contact.name}</td>
-					<td>${contact.email}</td>
+					<td>${user.firstname}</td>
+					<td>${user.email}</td>
 					<td><img src="${contact.photo}" class="img-thumbnail" style="width:100px; height:100px;"></td>
 
 					<td>

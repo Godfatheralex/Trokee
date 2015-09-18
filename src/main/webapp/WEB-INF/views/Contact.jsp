@@ -45,7 +45,7 @@ function readURL(input) {
 		<h1>Nouveau / Modification Usager</h1>
 		<form:form action="saveContact" method="post" modelAttribute="contact">
 		<table>
-			<form:hidden path="id"/>
+			<form:hidden path=""/>
 			<tr>
 				<td>Prenom:</td>
 				<td><form:input path="name" /></td>
